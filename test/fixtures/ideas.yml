@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  idea_name: MyString
+  content: MyText
+  purpose: MyText
+  remark: MyText
+  picture: MyString
+
+two:
+  user: two
+  idea_name: MyString
+  content: MyText
+  purpose: MyText
+  remark: MyText
+  picture: MyString

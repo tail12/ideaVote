@@ -1,0 +1,24 @@
+<div class="user-profile">
+  <div class="icon">
+    <%= gravatar_for user, size: 100 %>
+  </div>
+  <div class="name">
+    <h1><%= user.name %></h1>
+  </div>
+  <div class="status">
+    <ul>
+      <li>
+        <div class="status-label">FOLLOWING</div>
+        <div class="status-value">
+          100人くらい
+        </div>
+      </li>
+      <li>
+        <div class="status-label">FOLLOWERS</div>
+        <div id="followers" class="status-value">
+          50人くらい
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
