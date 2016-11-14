@@ -1,24 +1,29 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# IdeaVotes README
 
-Things you may want to cover:
+## IdeaVotesとは
+idea(発想，アイディア)にvote(投票)するSNS．
+あるユーザーが思いついたアイディアを投稿し，
+それに対して，別のユーザーがそのアイディアを見て，それ「いいね」ができる．
+もちろんアイディアに対してコメントもできる．
 
-* Ruby version
+## 既存のサービスとの違いは何か
+IdeaVotesとFBの最大の違いは，アイディアがメインだという点．
+アイディアがあり，他の人とつながり，共同開発のメンバーを募集するなどといったことができる．
 
-* System dependencies
+更に，ユーザーの閲覧傾向から，このアイディアいいんじゃない？
+などといった，リコメンド機能を付ける予定である．
 
-* Configuration
+まとめると，
+- アイディアメインのSNSになる
+- リコメンド機能を実装することで，各ユーザーに合ったアイディアを集めることができる
 
-* Database creation
+## 主な機能
+主な機能としては以下である．
 
-* Database initialization
+- アイディアの投稿，編集，削除機能
+- アイディアに対するコメント，「いいね」機能
+- 各ユーザーに対してオススメを表示する機能
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 開発期間
+Nov 14, 2016 〜
