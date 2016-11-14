@@ -1,6 +1,7 @@
 class IdeasController < ApplicationController
-  before_action :logged_in_user, only: [:create]
-  before_action :set_idea, only: [:show, :liking_users]
+  before_action :logged_in_user, only: [:create, :new]
+  before_action :set_idea, except: [:new, :create]
+
   def new
     @idea = Idea.new
   end
