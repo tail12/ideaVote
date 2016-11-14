@@ -9,4 +9,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+  def current_user?(user)
+    current_user.id == user.id
+  end
 end

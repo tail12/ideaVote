@@ -1,11 +1,5 @@
-<div class="container-inner inner-sm clearfix">
-  <div class="idea-box">
-    <div class="side-box">
-      <div class="side-box-body">
-          <%= gravatar_for(user) %>
-          <%= link_to user.name, user %> |
-          <%= user.email %>
-      </div>
-    </div>
-  </div>
-</div>
+<li>
+  <%= gravatar_for(user) %>
+  <%= link_to user.name, user %> |
+  <%= user.email %>
+</li>
