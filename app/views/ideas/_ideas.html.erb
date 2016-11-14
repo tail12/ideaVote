@@ -20,6 +20,15 @@
               </p>
             </div>
             <div id="like-link" class="action clearfix">
+              <% if logged_in? %>
+                  <% if current_user.likes.find_by(idea_id: idea.id) %>
+                      <%= link_to 'Unlike', unlike_path(idea.id), method: :delete %>
+                  <% else %>
+                      <%= link_to 'Like', like_path(idea.id), method: :post %>
+                  <% end %>
+              <% else %>
+                  <%= link_to 'Like', login_path %>
+              <% end %>
             </div>
           </div>
       <% end %>

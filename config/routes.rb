@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   post   'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  post 'like/:idea_id' => 'likes#like', as: 'like'
+  delete 'unlike/:idea_id' => 'likes#unlike', as: 'unlike'
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
   resources :ideas
