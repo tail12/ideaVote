@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def like_ideas
+
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)

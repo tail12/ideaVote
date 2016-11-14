@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  has_many :likes
   has_many :ideas
+  has_many :likes
+  has_many :like_ideas, through: :likes, source: :idea
 
 
   before_save {self.email = email.downcase}

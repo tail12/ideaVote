@@ -1,12 +1,12 @@
 class IdeasController < ApplicationController
   before_action :logged_in_user, only: [:create]
-
+  before_action :set_idea, only: [:show, :liking_users]
   def new
     @idea = Idea.new
   end
 
   def show
-    @idea = Idea.find(params[:id])
+    @user = @idea.user
   end
 
   def create
@@ -19,8 +19,16 @@ class IdeasController < ApplicationController
     end
   end
 
+  def liking_users
+    @users = @idea.liking_users
+  end
+
   private
   def idea_params
     params.require(:idea).permit(:idea_name, :content, :purpose, :remark, :picture)
   end
+  def set_idea
+    @idea = Idea.find(params[:id])
+  end
+
 end

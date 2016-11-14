@@ -4,6 +4,7 @@
       <div class="img-wrap">
         <%# TODO アイデアイメージ %>
         <%= image_tag("no-image.png", alt: @idea.idea_name) %>
+
       </div>
     </div>
     <div class="title">
@@ -12,7 +13,7 @@
   </div>
   <div class="idea-single-side">
     <div class="side-box">
-      <h4 class="side-box-title">Likeしたユーザー</h4>
+      <h4 class="side-box-title">Likeしたユーザー数：<%= link_to @idea.likes.count, liking_users_idea_path(@idea.id) %>人</h4>
       <div class="side-box-body">
         <% # TODO Likeしたユーザー一覧 %>
 

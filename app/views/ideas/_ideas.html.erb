@@ -22,9 +22,9 @@
             <div id="like-link" class="action clearfix">
               <% if logged_in? %>
                   <% if current_user.likes.find_by(idea_id: idea.id) %>
-                      <%= link_to 'Unlike', unlike_path(idea.id), method: :delete %>
+                      <%= link_to 'Unlike', unlike_path(idea.id), method: :delete, remote: true %>
                   <% else %>
-                      <%= link_to 'Like', like_path(idea.id), method: :post %>
+                      <%= link_to 'Like', like_path(idea.id), method: :post, remote: true %>
                   <% end %>
               <% else %>
                   <%= link_to 'Like', login_path %>
