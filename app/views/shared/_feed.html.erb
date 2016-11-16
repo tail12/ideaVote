@@ -1,5 +1,3 @@
-<% if @feed_items.present? %>
-    <% if @feed_items.any? %>
-        <%= render 'ideas/ideas', ideas: @feed_items %>
-    <% end %>
+<% if @feed_items.any? %>
+    <%= render 'ideas/ideas', ideas: @feed_items %>
 <% end %>

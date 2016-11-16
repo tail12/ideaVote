@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :ideas
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :like_ideas, through: :likes, source: :idea
 
   has_many :following_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy

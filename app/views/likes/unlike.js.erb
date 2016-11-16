@@ -1,1 +1,3 @@
-$('#link-like').html('<%= escape_javascript(render("likes/link_like", idea: @idea)) %>');
+$('#link-like').html('<%= escape_javascript(render('likes/link_like', idea: @idea)) %>');
+$('#like-users').html('<%= escape_javascript(render('ideas/show_like', users: @users)) %>');
+$('#like-count').html('<%= @idea.likes.count %>')

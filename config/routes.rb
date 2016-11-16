@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get    'login' => 'sessions#new'
   post   'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  get 'new_arrival' => 'ideas#detail'
 
   resources :users, only: [:index, :show] do
     member do

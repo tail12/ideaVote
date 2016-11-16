@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :logged_in_user, only: [:create, :new]
-  before_action :set_idea, except: [:new, :create]
+  before_action :set_idea, except: [:new, :create, :detail]
 
   def new
     @idea = Idea.new
@@ -8,6 +8,7 @@ class IdeasController < ApplicationController
 
   def show
     @user = @idea.user
+    @users = @idea.liking_users
   end
 
   def create
@@ -19,6 +20,10 @@ class IdeasController < ApplicationController
       # @feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
       render 'ideas/new'
     end
+  end
+
+  def detail
+    @ideas = Idea.all.order("updated_at DESC").limit(6)
   end
 
   def liking_users

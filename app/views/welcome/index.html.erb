@@ -10,7 +10,7 @@
     </div>
   </div>
 </div>
-<h2>新着一覧</h2>
-<%= render 'shared/feed' %>
-<h2>タイムライン</h2>
-<%= render 'ideas/ideas' , ideas: @ideas %>
+<% if @feed_items.present?  %>
+  <h2>新着一覧</h2>
+  <%= render 'shared/feed' %>
+<% end %>
