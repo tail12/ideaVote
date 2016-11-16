@@ -7,9 +7,9 @@
           <%= f.label :idea_name, "アイデア名" %>
           <%= f.text_field :idea_name, class: "form-control", placeholder: "例：○○企画" %>
         </div>
-        <div class="field">
+        <div class="field content-box">
           <%= f.label :content, "内容" %>
-          <%= f.text_area :content, class: "form-control", placeholder: "例：本企画は，○○にメリットが有ります．" %>
+          <%= f.text_area :content, class: "form-control", placeholder: "例：本企画は，○○にメリットが有ります．" , :size=>"60x10" %>
         </div>
         <div class="field">
           <%= f.label :purpose, "目的" %>
