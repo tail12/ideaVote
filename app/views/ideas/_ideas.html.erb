@@ -21,13 +21,9 @@
                 <%= link_to "投稿者名： " + idea.user.name, idea.user %>
               </p>
             </div>
-            <div class="action clearfix">
+            <div id="like-link" class="action clearfix">
               <% if logged_in? %>
-                  <% if current_user.likes.find_by(idea_id: idea.id) %>
-                      <%= link_to 'Unlike', unlike_path(idea.id), method: :delete, remote: true %>
-                  <% else %>
-                      <%= link_to 'Like', like_path(idea.id), method: :post, remote: true %>
-                  <% end %>
+                <%= render 'likes/link_like', idea: idea %>
               <% else %>
                   <%= link_to 'Like', login_path %>
               <% end %>

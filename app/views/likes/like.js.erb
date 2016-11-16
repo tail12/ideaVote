@@ -1,1 +1,2 @@
-$("#like-link").html()
+$("#like-link").html("<%= escape_javascript(render("likes/link_like", idea: idea)) %>");
+
