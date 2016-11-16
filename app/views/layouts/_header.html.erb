@@ -3,11 +3,17 @@
     <div class="container-fluid">
       <div class="navbar-inner">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#content" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <h1 class="logo">
             <%= link_to "IdeaVotes", root_path, class: "navbar-brand" %>
           </h1>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="content">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "新着", new_arrival_path %></li>
             <% unless logged_in? %>
