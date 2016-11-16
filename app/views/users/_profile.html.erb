@@ -8,9 +8,9 @@
   <div class="status">
     <ul>
       <li>
-        <div class="status-label">FOLLOWING</div>
+        <div class="status-label">フォロー</div>
         <div class="status-value">
-          <strong id="followers">
+          <strong>
             <%= link_to user.following_users.count, following_user_path(@user) %>
           </strong>
         </div>
@@ -20,6 +20,14 @@
         <div class="status-value">
           <strong id="followers">
             <%= link_to user.followed_users.count, followers_user_path(@user) %>
+          </strong>
+        </div>
+      </li>
+      <li>
+        <div class="status-label">お気に入り</div>
+        <div class="status-value">
+          <strong>
+            <%= link_to user.like_ideas.count, like_ideas_user_path(@user) %>
           </strong>
         </div>
       </li>

@@ -34,6 +34,10 @@ class UsersController < ApplicationController
   end
 
   def like_ideas
+    @title = "お気に入りした投稿"
+    @user = User.find(params[:id])
+    @ideas = @user.like_ideas
+    render 'show_ideas'
   end
 
   def following
