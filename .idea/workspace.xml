@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="342e8a8e-99ac-418b-82ad-76fda964cf9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/likes/_link_like.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/likes/unlike.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ideas/_ideas.html.erb" afterPath="$PROJECT_DIR$/app/views/ideas/_ideas.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/likes/like.js.erb" afterPath="$PROJECT_DIR$/app/views/likes/like.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,8 +93,18 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile.lock" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2595">
+              <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -133,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/shared/_error_message.html.erb" />
         <option value="$PROJECT_DIR$/app/views/ideas/idea.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_error_messages.html" />
         <option value="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" />
@@ -183,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/views/likes/like.js.erb" />
         <option value="$PROJECT_DIR$/app/views/likes/unlike.js.erb" />
         <option value="$PROJECT_DIR$/app/views/likes/_link_like.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
@@ -892,12 +898,12 @@
       <updated>1479055542603</updated>
       <workItem from="1479055543853" duration="19149000" />
       <workItem from="1479084052402" duration="15832000" />
-      <workItem from="1479272595074" duration="20693000" />
+      <workItem from="1479272595074" duration="20860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55674000" />
+    <option name="totallyTimeSpent" value="55841000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -948,14 +954,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1337,10 +1335,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2595">
+          <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
