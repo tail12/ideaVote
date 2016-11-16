@@ -1,4 +1,4 @@
 <%= render 'profile', user: @user %>
-
+<%= render 'follow_form' if logged_in? %>
 <h2>投稿一覧</h2>
 <%= render 'ideas/ideas', ideas: @ideas %>

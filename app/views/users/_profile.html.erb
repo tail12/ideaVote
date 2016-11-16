@@ -10,13 +10,13 @@
       <li>
         <div class="status-label">FOLLOWING</div>
         <div class="status-value">
-          100人くらい
+          <%= user.following_users.count %>
         </div>
       </li>
       <li>
         <div class="status-label">FOLLOWERS</div>
         <div id="followers" class="status-value">
-          50人くらい
+          <%= link_to user.followed_users.count, "#" %>
         </div>
       </li>
     </ul>

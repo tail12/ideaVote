@@ -9,6 +9,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "新着", "#" %></li>
             <% unless logged_in? %>
                 <li><%= link_to "新規登録", signup_path %></li>
             <% else %>
