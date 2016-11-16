@@ -31,4 +31,8 @@ class User < ApplicationRecord
   def following?(other_user)
     following_users.include?(other_user)
   end
+
+  def feed_items
+    Idea.where(user_id: following_user_ids + [self.id])
+  end
 end

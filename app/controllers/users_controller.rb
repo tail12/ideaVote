@@ -36,6 +36,19 @@ class UsersController < ApplicationController
   def like_ideas
   end
 
+  def following
+    @title = "フォロー中のユーザ"
+    @user = User.find(params[:id])
+    @users = @user.following_users
+    render 'show_follow'
+  end
+
+  def followers
+    @title = "フォロワー"
+    @user = User.find(params[:id])
+    @users = @user.followed_users
+    render 'show_follow'
+  end
 
 
   private

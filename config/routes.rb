@@ -22,7 +22,11 @@ Rails.application.routes.draw do
   delete 'unlike/:idea_id' => 'likes#unlike', as: 'unlike'
 
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :ideas
   resources :relationships, only: [:create, :destroy]
 end

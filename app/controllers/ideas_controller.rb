@@ -16,6 +16,7 @@ class IdeasController < ApplicationController
       flash[:success] = "投稿完了"
       redirect_to root_url
     else
+      # @feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
       render 'ideas/new'
     end
   end

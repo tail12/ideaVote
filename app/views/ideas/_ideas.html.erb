@@ -15,7 +15,10 @@
             </div>
             <div class="detail">
               <p class="title">
-                <%= link_to idea.idea_name, idea_path(idea.id) %>
+                <%= link_to "アイデア名： " + idea.idea_name, idea_path(idea.id) %>
+              </p>
+              <p>
+                <%= link_to "投稿者名： " + idea.user.name, idea.user %>
               </p>
             </div>
             <div id="like-link" class="action clearfix">

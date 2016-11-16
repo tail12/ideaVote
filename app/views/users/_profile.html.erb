@@ -10,13 +10,17 @@
       <li>
         <div class="status-label">FOLLOWING</div>
         <div class="status-value">
-          <%= user.following_users.count %>
+          <strong id="followers">
+            <%= link_to user.following_users.count, following_user_path(@user) %>
+          </strong>
         </div>
       </li>
       <li>
-        <div class="status-label">FOLLOWERS</div>
-        <div id="followers" class="status-value">
-          <%= link_to user.followed_users.count, "#" %>
+        <div class="status-label">フォロワー</div>
+        <div class="status-value">
+          <strong id="followers">
+            <%= link_to user.followed_users.count, followers_user_path(@user) %>
+          </strong>
         </div>
       </li>
     </ul>
