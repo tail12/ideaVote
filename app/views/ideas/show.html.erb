@@ -8,14 +8,14 @@
       </div>
     </div>
     <div class="title">
-
+      <%= @idea.idea_name %>
     </div>
   </div>
   <div class="idea-single-side">
     <div class="side-box">
       <h4 class="side-box-title">Likeしたユーザー数：<%= link_to @idea.likes.count, liking_users_idea_path(@idea.id), id: "like-count" %>人</h4>
       <div id="like-users" class="side-box-body">
-        <% # TODO Likeしたユーザー一覧 %>
+        <% # Likeしたユーザー一覧 %>
           <%= render 'ideas/show_like', users: @users %>
         <%# end %>
       </div>
@@ -26,8 +26,14 @@
             <%= render 'likes/link_like', idea: @idea %>
           </div>
       <% else %>
-          <%= link_to 'イイネ', login_path, class: "btn like btn-warning" %>
+          <%= link_to 'Like', login_path, class: "btn like btn-warning" %>
       <% end %>
+    </div>
+    <div class="side-box">
+      <h4 class="side-box-title">アイデア内容</h4>
+      <div class="side-box-body">
+        <%= render 'ideas/contents', idea: @idea %>
+      </div>
     </div>
   </div>
 </div>
