@@ -21,11 +21,13 @@
                 <%= link_to "投稿者名： " + idea.user.name, idea.user %>
               </p>
             </div>
-            <div id="like-link" class="action clearfix">
+            <div class="action clearfix">
               <% if logged_in? %>
-                <%= render 'likes/link_like', idea: idea %>
+                  <div id="link-like">
+                    <%= render 'likes/link_like', idea: idea %>
+                  </div>
               <% else %>
-                  <%= link_to 'Like', login_path %>
+                  <%= link_to '', login_path, class: "btn like btn-warning" %>
               <% end %>
             </div>
           </div>
