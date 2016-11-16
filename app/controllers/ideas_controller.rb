@@ -8,7 +8,7 @@ class IdeasController < ApplicationController
 
   def show
     @user = @idea.user
-    @users = @idea.liking_users
+    @users = @idea.liking_users.order("updated_at DESC").limit(6)
   end
 
   def create
@@ -27,7 +27,7 @@ class IdeasController < ApplicationController
   end
 
   def liking_users
-    @users = @idea.liking_users
+    @users = @idea.liking_users.order("updated_at DESC")
   end
 
   private
