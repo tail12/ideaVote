@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+  before_action :set_user, only: [:show, :update]
   before_action :correct_user, only: [:edit, :update]
 
   def new
@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    # file = params[:user][:avatar]
+    # @user.set_image(file)
     if @user.save
       log_in @user
       redirect_to @user, notice: "会員登録完了です！"
@@ -26,6 +28,8 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
+      # file = params[:user][:avatar]
+      # @user.set_image(file)
       flash[:success] = "更新されました！"
       redirect_to @user
     else
@@ -54,10 +58,9 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
-
   private
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar)
   end
 
   def set_user

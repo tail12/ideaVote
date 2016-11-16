@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+  mount_uploader :avatar, AvatarUploader
+
   has_many :ideas
   has_many :likes, dependent: :destroy
   has_many :like_ideas, through: :likes, source: :idea
@@ -34,5 +37,13 @@ class User < ApplicationRecord
 
   def feed_items
     Idea.where(user_id: following_user_ids + [self.id])
+  end
+
+  def set_image(file)
+    if !file.nil?
+      file_name = file.original_filename
+      File.open("public/user_images/#{file_name}", 'wb') { |f| f.write(file.read) }
+      self.avatar = file_name
+    end
   end
 end
