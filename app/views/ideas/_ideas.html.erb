@@ -4,9 +4,9 @@
           <div class="idea-box">
             <div class="image">
               <div class="img-wrap">
-                <% if idea.picture.present? %>
+                <% if idea.catch.present? %>
                     <%# 画像が存在したら %>
-                    hogehoge
+                    <%= image_tag idea.catch, alt: idea.user.name %>
                 <% else %>
                     <%# 画像が存在しなかったら  %>
                     <%= image_tag "no-image.png" %>

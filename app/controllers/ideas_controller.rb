@@ -23,6 +23,18 @@ class IdeasController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @idea.update_attributes(idea_params)
+      flash[:success] = "更新完了"
+      redirect_to @idea
+    else
+      render 'edit'
+    end
+  end
+
   def detail
     @ideas = Idea.all.order("updated_at DESC").limit(6)
   end
@@ -33,7 +45,7 @@ class IdeasController < ApplicationController
 
   private
   def idea_params
-    params.require(:idea).permit(:idea_name, :content, :purpose, :remark, :picture)
+    params.require(:idea).permit(:idea_name, :content, :purpose, :remark, :catch)
   end
   def set_idea
     @idea = Idea.find(params[:id])

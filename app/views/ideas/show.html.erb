@@ -3,14 +3,17 @@
     <div class="image">
       <div class="img-wrap">
         <%# TODO アイデアイメージ %>
-        <%= image_tag("no-image.png", alt: @idea.idea_name) %>
+        <% if @idea.catch.present? %>
+            <%= image_tag @idea.catch.url, alt: @idea.idea_name %>
+        <% else %>
+            <%= image_tag("no-image.png", alt: @idea.idea_name) %>
+        <% end %>
       </div>
     </div>
     <div class="title">
       <%= @idea.idea_name %>
     </div>
   </div>
-
 
   <div class="idea-single-side">
     <div class="side-box">
@@ -34,6 +37,9 @@
       <h4 class="side-box-title">アイデア内容</h4>
       <div class="side-box-body">
         <%= render 'ideas/contents', idea: @idea %>
+      </div>
+      <div>
+        <%= link_to "編集", edit_idea_path(@idea.id) %>
       </div>
     </div>
   </div>

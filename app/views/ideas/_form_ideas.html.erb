@@ -1,0 +1,30 @@
+<%= form_for(idea, html:{ multipart: true}) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="form-group">
+      <%= f.label :idea_name, "アイデア名" %>
+      <%= f.text_field :idea_name, class: "form-control", placeholder: "例：○○企画" %>
+    </div>
+    <div class="field">
+      <%= f.label :content, "内容" %>
+      <%= f.text_area :content, class: "form-control", placeholder: "例：本企画は，○○にメリットが有ります．" %>
+    </div>
+    <div class="field">
+      <%= f.label :purpose, "目的" %>
+      <%= f.text_area :purpose, class: "form-control", placeholder: "例：このプロジェクトによって○○という問題を解決出来る！"  %>
+    </div>
+    <div class="field">
+      <%= f.label :remark, "備考(任意)" %>
+      <%= f.text_area :remark, class: "form-control", placeholder: "例：開発環境は”Rails 5.0.0.1を使います．" %>
+    </div>
+
+    <%= f.submit "完了", class: "btn btn-primary" %>
+
+    <div class="picture">
+      <% if idea.catch.present? %>
+          <%= image_tag idea.catch.url if idea.catch %>
+      <% end %>
+      <%= f.label :catch, "キャッチアイ画像(任意)" %>
+      <%= f.file_field :catch %>
+
+    </div>
+<% end %>

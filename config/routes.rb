@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :ideas, only: [:new, :show, :create] do
+  resources :ideas do
     member do
       get :liking_users
     end

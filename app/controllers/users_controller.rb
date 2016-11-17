@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @ideas = @user.ideas
+    @ideas = @user.ideas.order("updated_at DESC")
   end
 
   def edit
