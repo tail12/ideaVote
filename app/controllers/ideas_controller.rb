@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
   before_action :logged_in_user, only: [:create, :new, :edit]
+  before_action :correct_user, only: [:update, :edit]
   before_action :set_idea, except: [:new, :create, :detail]
   def new
     @idea = Idea.new
@@ -36,7 +37,7 @@ class IdeasController < ApplicationController
   end
 
   def detail
-    @ideas = Idea.all.order("updated_at DESC").limit(6)
+    @ideas = Idea.all.order("updated_at DESC").limit(50)
   end
 
   def liking_users
@@ -49,6 +50,15 @@ class IdeasController < ApplicationController
   end
   def set_idea
     @idea = Idea.find(params[:id])
+  end
+
+  def correct_user
+    @idea = Idea.find(params[:id])
+    @user = User.find(@idea.user.id)
+    if !current_user?(@user)
+      flash[:notice] = 'アクセスが許可されていません！'
+      redirect_to root_path
+    end
   end
 
 end
