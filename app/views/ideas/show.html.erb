@@ -4,13 +4,14 @@
       <div class="img-wrap">
         <%# TODO アイデアイメージ %>
         <%= image_tag("no-image.png", alt: @idea.idea_name) %>
-
       </div>
     </div>
     <div class="title">
       <%= @idea.idea_name %>
     </div>
   </div>
+
+
   <div class="idea-single-side">
     <div class="side-box">
       <h4 class="side-box-title">Likeしたユーザー数：<%= link_to @idea.likes.count, liking_users_idea_path(@idea.id), id: "like-count" %>人</h4>
@@ -34,6 +35,17 @@
       <div class="side-box-body">
         <%= render 'ideas/contents', idea: @idea %>
       </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="row">
+    <div class="col-md-8">
+      <%= render 'comments/form', comment: @comment%>
+    </div>
+    <div class="col-md-4">
+      <%= render 'comments/comment', comment: @comment, user: @user, id: "comments" %>
     </div>
   </div>
 </div>

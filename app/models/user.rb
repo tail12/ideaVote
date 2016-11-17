@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_many :followed_users, through: :followed_relationships, source: :follower
 
   before_save {self.email = email.downcase}
-  validates :name, presence: true, length: {maximum: 50}
+  validates :name, presence: true, length: {maximum: 50}, uniqueness: {case_sensitive: true}
   VALID_EMAIL_REGEX = /\A[a-zA-Z0-9_\#!$%&`'*+\-{|}~^\/=?\.]+@[a-z0-9][a-z0-9\.-]+\z/i
   validates :email, presence: true, length: {maximum: 255}, format: {with: VALID_EMAIL_REGEX},
           uniqueness: {case_sensitive: false}

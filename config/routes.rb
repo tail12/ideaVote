@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :comments
   root 'welcome#index'
   get 'signup' => 'users#new'
   get    'login' => 'sessions#new'

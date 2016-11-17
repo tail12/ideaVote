@@ -1,7 +1,6 @@
 class IdeasController < ApplicationController
   before_action :logged_in_user, only: [:create, :new]
   before_action :set_idea, except: [:new, :create, :detail]
-
   def new
     @idea = Idea.new
   end
@@ -9,6 +8,8 @@ class IdeasController < ApplicationController
   def show
     @user = @idea.user
     @users = @idea.liking_users.order("updated_at DESC").limit(6)
+    @comments = @idea.comments.all
+    @comment = @idea.comments.build
   end
 
   def create
