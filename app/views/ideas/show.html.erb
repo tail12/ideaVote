@@ -38,9 +38,11 @@
       <div class="side-box-body">
         <%= render 'ideas/contents', idea: @idea %>
       </div>
-      <div>
-        <%= link_to "編集", edit_idea_path(@idea.id) %>
-      </div>
+      <% if current_user == @user %>
+          <div>
+            <%= link_to "編集", edit_idea_path(@idea.id), class: "btn btn-warning" %>
+          </div>
+      <% end %>
     </div>
   </div>
 </div>

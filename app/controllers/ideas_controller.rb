@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :logged_in_user, only: [:create, :new]
+  before_action :logged_in_user, only: [:create, :new, :edit]
   before_action :set_idea, except: [:new, :create, :detail]
   def new
     @idea = Idea.new

@@ -1,4 +1,7 @@
-<%= idea.idea_name %>
+<h5>【アイデア名】</h5>
+<p class="indent">
+  <%= idea.idea_name %>
+</p>
 <h5>【概要】</h5>
 <p class="indent">
   <%= idea.content %>
@@ -19,6 +22,6 @@
     </p>
 <% end %>
 <span class="right-side">
-  投稿は<%= time_ago_in_words(idea.created_at) %>前
+  投稿は<%= time_ago_in_words(idea.created_at) %>前 by <%= link_to idea.user.name, @user %>
 </span>
 

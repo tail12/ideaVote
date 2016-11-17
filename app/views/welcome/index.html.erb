@@ -3,7 +3,7 @@
     <div class="cover-contents">
       <h1>アイデアでつながるSNS</h1>
       <% unless logged_in? %>
-          <%= link_to 'アイデアを共有する', login_path, class: "btn btn-success btn-lg" %>
+          <%= link_to 'ログイン', login_path, class: "btn btn-success btn-lg" %>
       <% else %>
           <%= link_to 'アイデアを共有する', new_idea_path, class: "btn btn-success btn-lg" %>
       <% end %>
